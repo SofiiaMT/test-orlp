@@ -1,0 +1,162 @@
+/*TODO*/
+body, html{
+  margin: 0;
+}
+
+.header-text {
+    color:white;
+    text-shadow: 0 1px white;
+}
+
+.mp-card {
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0 1px 10px 1px white;
+}
+
+.mp-card:hover {
+    cursor:pointer;
+    background-color:#f7f7f7;
+}
+
+.alertMessage {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    color: #e8241e;
+    margin-top: 10px;
+    text-align: center;
+    z-index: 1;
+}
+
+.alert-danger{
+  border: 1px solid red;
+}
+
+.alert-success{
+  border: 1px solid green;
+}
+
+.alert-warning{
+  border: 1px solid yellow;
+}
+
+.custom-btn-google{
+  color: white;
+  background: rgb(220, 78, 65);
+}
+
+.custom-btn-facebook{
+  background: #3b5998;
+  color: white;
+}
+
+.custom-btn-google, .custom-btn-facebook{
+  display: inline-block;
+  width: 49%;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 13px;
+  text-transform: inherit;
+  font-weight: 600;
+  text-align: center;
+}
+
+.custom-btn-google:hover, .custom-btn-facebook:hover {
+  cursor: pointer;
+  color: #e1d7e8;
+}
+
+span.googleIcon, span.facebookIcon {
+  display: block;
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-top: 2px;
+}
+
+span.googleIcon{
+  background: url('../images/google.png') transparent 100% no-repeat;
+  margin-left: 5px;
+  background-size: contain;
+}
+
+span.facebookIcon {
+  background: url('../images/facebook.png') transparent 100% no-repeat;
+}
+
+.textSpan{
+  white-space: pre-line;
+}
+
+.input-group-addon{
+  float: left;
+  display: inline;
+  min-height: 33px;
+}
+
+.invalid-feedback{
+  color: #fd0505;
+  font-weight: 500;
+}
+
+.form-control.is-invalid{
+  border-color: #fd0505;
+}
+
+.custom-input{
+  display: flow-root;
+
+}
+
+.close{
+  display: inline-block;
+}
+
+.recaptcha{
+  display: inline-block;
+}
+
+.row{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+star-rating-comp > div{
+  outline: none;
+  cursor: pointer;
+}
+
+div, button:focus, .card-title, img{
+  outline: none;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.form-control {
+  height: 100%;
+}
+
+.bg {
+  background: url(../../assets/images/background_home_page.jpg) no-repeat center bottom;
+  background-size: cover;
+  right: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+}
+.title {
+  margin-top: 20%;
+  color: black;
+  font-size: 37px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", sans-serif;
+}
+.sub-title {
+  color: #ffc91b;
+  font-size: 23px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+}

@@ -1,0 +1,12 @@
+.pagination{
+  width: 20%;
+  margin: auto;
+}
+
+.pagination li.active > a{
+  background-color:#eee;
+}
+
+#row-button {
+  margin-top: 20px;
+}

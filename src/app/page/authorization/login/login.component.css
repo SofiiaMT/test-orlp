@@ -1,0 +1,28 @@
+.card {
+  margin-top: 20px;
+  background-color: rgba(46, 62, 87, 0.59);
+  color: white;
+  text-align: center;
+  width: 345px;
+}
+
+.btn-login {
+  width: 100%;
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid #677182
+}
+
+.card-body {
+  padding-bottom: 2%;
+}
+.main-container {
+  height: 600px;
+  max-width: 1800px;
+}
+
+.btn-link{
+  color: powderblue;;
+}

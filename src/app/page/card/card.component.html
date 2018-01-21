@@ -1,0 +1,81 @@
+<div class="container" *ngIf="cards">
+  <div class="container">
+    <div *ngIf="areCardsEnded" class="w3-center w3-animate-right">
+      <div class="info-additional-container">
+        <div class="info-additional-content">
+          <h4>The deck is over</h4>
+          <p>{{cardsEndedMessage}}</p>
+          <hr>
+          <div *ngIf="isShowRating">
+            <p>{{badStatusMark}} question was TOO HARD.</p>
+            <p>{{normalStatusMark}} question was MEDIUM</p>
+            <p>{{goodStatusMark}} question was EASY</p>
+          </div>
+        </div>
+        <div class="info-additional-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" routerLink="/main">Return to home page</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="getLearningCards(false)">Continue learning</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-container" *ngIf="areCardsEnded === false">
+      <div class="card" [ngClass]="{'rotate' : routing == true}">
+        <div class="front">
+          <div class="header">
+            <h1 class="motto">
+              {{cards[questionNumber].question}}
+            </h1>
+          </div>
+          <div class="content">
+            <div class="main">
+                <div>
+                  <codemirror [(ngModel)]="answer"
+                              [config]="config"></codemirror>
+                </div>
+              </div>
+
+            <button class="btn btn-primary button-difficult mt-3 mx-auto" (click)="onRotate()">Check</button>
+          </div>
+        </div> <!-- end front panel -->
+        <div class="back">
+          <div class="header">
+            <h1 class="motto">
+              {{cards[questionNumber].question}}
+            </h1>
+          </div>
+          <div class="content">
+            <div class="main" style="margin-bottom: -10px;">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5>Your answer</h5>
+                      <div>
+                        <codemirror [(ngModel)]="answer"
+                                    [config]="answerConfig"></codemirror>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <h5 class="correct-answer-header">Correct answer</h5>
+                      <div >
+                      <codemirror [(ngModel)] = "cards[questionNumber].answer" [config]="answerConfig"></codemirror>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="question-was">
+              <h5>The question was:</h5>
+            </div>
+            <div class=" row justify-content-center align-items-center">
+              <button class="btn btn-danger button-difficult mx-1" (click)="sendStatus('BAD')" data-toggle="modal" data-target="#modal">TOO HARD</button>
+              <button class="btn btn-warning button-difficult mx-1" (click)="sendStatus('NORMAL')" data-toggle="modal" data-target="#modal">MEDIUM</button>
+              <button class="btn btn-success button-difficult mx-1" (click)="sendStatus('GOOD')" data-toggle="modal" data-target="#modal">EASY</button>
+            </div>
+          </div>
+        </div> <!-- end back panel -->
+      </div> <!-- end card -->
+    </div> <!-- end card-container -->
+  </div>
+</div>

@@ -1,0 +1,153 @@
+/* CATEGORY PAGE CSS */
+.table {
+  margin: 25px;
+  background-color: white;
+}
+
+.course-head {
+  cursor: pointer;
+}
+
+.course-img {
+  width: 50px;
+  height: 50px;
+}
+
+.star-rating {
+  width: 100px;
+}
+
+.catalogPage-nav-borders {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catalogPage-item-right:hover, .catalogPage-item-left:hover {
+  cursor: pointer;
+}
+
+.catalogPage-item-right, .catalogPage-item-left {
+  background-color: #c8c8c8;
+}
+
+.catalogPage-items {
+  background-color: #c8c8c8;
+
+}
+
+.catalogPage-active-element {
+  color: white;
+  background-color: #3f5b5c;
+}
+
+.catalogPage-button {
+  background-color: #3f5b5c;
+  color: white;
+  border: none;
+}
+
+.imgChanging {
+  width: 100px;
+}
+
+.addToFolderImg {
+  width: 25px;
+  height: 25px;
+}
+
+.addToFolderImg:hover {
+  transform: scale(0.9);
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.button {
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+.SubscribeCheckboxActive {
+  background-image: url("../../../assets/images/add.png");
+}
+
+.SubscribeCheckboxActive:hover {
+  transform: scale(0.9);
+}
+
+.SubscribeCheckboxInActive {
+  background-image: url("../../../assets/images/add.png");
+  opacity: 0.1;
+}
+
+.SubscribeCheckboxChecked {
+  background-image: url("../../../assets/images/checked.png");
+}
+
+.SubscribeCheckboxChecked:hover {
+  transform: scale(0.9);
+}
+
+.table-row:hover {
+  cursor: pointer;
+  background-color: #e1d7e8;
+}
+.pagination{
+  width: 20%;
+  margin: auto;
+}
+.row th, li{
+  cursor: pointer;
+}
+.row th:hover, .pagination li:hover {
+  color: #000;
+  background-color: #e1d7e8;
+}
+.pagination li.active > a:hover{
+  cursor: pointer;
+}
+.pagination li.active > a{
+  background-color:#eee;
+}
+.active-page-link:hover{
+  background-color: #bcbcbc;
+}
+.disabled{
+  cursor: default;
+}
+th, li{
+  cursor: pointer;
+}
+.table-row:hover {
+  cursor: pointer;
+  background-color: #e1d7e8;
+}
+.deck-header th:hover {
+  cursor: pointer;
+  background-color: #e1d7e8;
+}
+.header-item {
+  background-color: #e6e6e6;
+}
+.deck-header th.alignCenter:hover {
+  background-color: white;
+}
+.cards-number-container {
+  text-align: center;
+}
+
+.cards-number{
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 40px;
+  height: 30px;
+  background-color: #66c1fa;
+  border: 2px solid black;
+  border-radius: 50px;cursor: default;
+}

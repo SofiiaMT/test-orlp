@@ -1,0 +1,136 @@
+.title{
+  margin: 25px 0 0 20px;
+}
+.title-signed-in{
+  font-size: 18px;
+}
+.bg {
+  background: url(../../../assets/images/background_home_page.jpg) no-repeat center bottom;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+#forma {
+  background-color: white;
+}
+
+img {
+  margin: 15px 20px 20px 20px;
+  height: 96px;
+  width: 96px;
+}
+
+.row {
+  margin: 20px 0px 0px 0px;
+}
+
+#delete {
+  margin: 45px 0px 0px 0px;
+}
+
+.accountMessage {
+  color: #009900;
+}
+
+.my-container {
+  background-color: rgba(248, 249, 250, 0.55);
+  height: 100%;
+}
+
+.custom-file {
+  margin: 60px 40px 60px 40px;
+}
+
+.col-sm-9-align-left {
+  text-align: left;
+}
+
+.learning-regime-tab {
+  padding: 2% 0;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.radio-button-container {
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.radio-button-container:hover {
+  background-color: #f1f1f1;
+}
+
+.explanation {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.checked {
+  background-color: #eef1ec;
+}
+
+.checked:hover {
+  background-color: #e0e3de;
+}
+
+.cards-number {
+  text-align: center;
+}
+
+.btn-pointer {
+  cursor: pointer;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.remembering-level {
+  width: 70px;
+  text-align: center;
+}
+
+.centered-container {
+  text-align: center;
+}
+
+.remembering-level-container {
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.remembering-level-container table {
+  margin: auto;
+}
+
+.regimes-container {
+  padding: 0 20%;
+}
+
+.explanation-header {
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
+}
+
+.learning-tab-alert {
+  margin: 2% 20% 0 20%;
+  font-weight: normal;
+}
+
+.savingResultMessage {
+  margin-bottom: 1%;
+}
+
+.forbidden {
+  cursor: not-allowed;
+}
