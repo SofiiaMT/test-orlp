@@ -23,8 +23,8 @@ build:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # A step that executes `npm install` command
-    - npm-install
-   #Deploy stage
+    - npm-run-build
+#Deploy stage
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
