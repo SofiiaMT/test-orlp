@@ -46,9 +46,9 @@ deploy:
             name: Copy Dist dir
             code: |
                 tar -czvf dist.tar.gz ./dist
-                ssh $LOGIN@$REMOTE_HOST "rm --force ~/orlp-web/dist.tar.gz"
+                ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && rm -rf dist*"
                 scp dist.tar.gz $LOGIN@$REMOTE_HOST:~/orlp-web/dist.tar.gz
-                # ssh $LOGIN@$REMOTE_HOST "tar -xzvf dist.tar.gz"
+                ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && tar -zxvf dist.tar.gz"
                 # ssh $LOGIN@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
         # - script:
         #     name: Stop Containers
