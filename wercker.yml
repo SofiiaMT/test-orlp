@@ -36,11 +36,6 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
-    - script:
-        name: Archiving dist directory
-        code: |
-          echo "pwd"
-
 deploy:
     steps:
         - wercker/add-ssh-key:
@@ -50,6 +45,7 @@ deploy:
         - script:
             name: Copy Dist dir
             code: |
+                tar -czvf dist.tar.gz ./dist
                 # ssh $LOGIN@$REMOTE_HOST "rm --force /tmp/counter.tar"
                 # scp counter.tar $LOGIN@$REMOTE_HOST:/tmp/counter.tar
                 # ssh $LOGIN@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
