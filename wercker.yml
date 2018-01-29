@@ -51,7 +51,7 @@ deploy:
                 ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && tar -zxvf dist.tar.gz"
         - script:
             name: Stop Docker containers
-            code: ssh $LOGIN@$REMOTE_HOST "docker stop $(docker ps -q)"
+            code: ssh $LOGIN@$REMOTE_HOST "sudo docker stop $(sudo docker ps -q)"
         - script:
             name: Run Docker container
             code: |
