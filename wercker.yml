@@ -35,3 +35,23 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+
+deploy:
+    steps:
+        - wercker/add-ssh-key:
+            keyname: REMOTE_HOST_KEY
+        - add-to-known_hosts:
+            hostname: $REMOTE_HOST
+        - script:
+            name: Copy Container
+            code: |
+                # ssh root@$REMOTE_HOST "rm --force /tmp/counter.tar"
+                # scp counter.tar root@$REMOTE_HOST:/tmp/counter.tar
+                # ssh root@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
+        - script:
+            name: Stop Container
+            code: ssh $LOGIN@$REMOTE_HOST "docker stop \$(docker ps -q)"
+        # - script:
+        #     name: Run Container
+        #     code: |
+        #         CID=$(ssh root@$REMOTE_HOST "docker run -d -p 80:5000 $REPOSITORY_NAME /var/www/main --host=0.0.0.0 --port=5000")
