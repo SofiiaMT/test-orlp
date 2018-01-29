@@ -47,7 +47,7 @@ deploy:
             code: |
                 tar -czvf dist.tar.gz ./dist
                 ssh $LOGIN@$REMOTE_HOST "rm --force ~/orlp-web/dist.tar.gz"
-                sftp dist.tar.gz $LOGIN@$REMOTE_HOST:~/orlp-web/dist.tar.gz
+                scp dist.tar.gz $LOGIN@$REMOTE_HOST:~/orlp-web/dist.tar.gz
                 # ssh $LOGIN@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
         # - script:
         #     name: Stop Containers
