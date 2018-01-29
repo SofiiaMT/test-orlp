@@ -36,6 +36,11 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
+    - script:
+        name: Archiving dist directory
+        code: |
+          echo "pwd"
+
 deploy:
     steps:
         - wercker/add-ssh-key:
