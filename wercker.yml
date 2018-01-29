@@ -50,7 +50,7 @@ deploy:
                 # ssh root@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
         - script:
             name: Stop Container
-            code: ssh $LOGIN@$REMOTE_HOST "docker stop \$(docker ps -q)"
+            code: ssh $LOGIN@$REMOTE_HOST "docker stop $(docker ps -q)"
         # - script:
         #     name: Run Container
         #     code: |
