@@ -39,7 +39,7 @@ build:
 deploy:
     steps:
         - wercker/add-ssh-key:
-            keyname: SSHKEY_PRIVATE
+            keyname: $SSHKEY_PRIVATE
         - add-to-known_hosts:
             hostname: $REMOTE_HOST
         - script:
