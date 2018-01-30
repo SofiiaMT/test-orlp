@@ -55,8 +55,8 @@ deploy:
         - script:
             name: Run Docker container
             code: |
-                # ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && rm -rf dist*"
-                # ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && tar -zxvf dist.tar.gz"
+                ssh $LOGIN@$REMOTE_HOST "docker run -dit --name orlp-web -p 80:80 nginx"
+                ssh $LOGIN@$REMOTE_HOST "cd ~/orlp-web/ && docker cp dist/. orlp-web:/usr/share/nginx/html/"
                 # ssh $LOGIN@$REMOTE_HOST "cat /tmp/counter.tar | docker import - $REPOSITORY_NAME"
  
         # - script:
